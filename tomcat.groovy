@@ -18,9 +18,9 @@ pipeline {
         }
         stage('build-artifacts') {
             steps { 
-                //sh 'curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"'
-                //sh 'unzip awscliv2.zip'
-                //sh 'sudo ./aws/install'
+                sh 'curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"'
+                sh 'unzip awscliv2.zip'
+                sh 'sudo ./aws/install'
                 sh 'aws s3 cp **/*.war s3://tomcat-bucket-1/student-${BUILD_ID}.war'
             }
         }
