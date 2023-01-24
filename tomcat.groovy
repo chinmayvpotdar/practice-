@@ -5,7 +5,7 @@ pipeline {
             steps { 
                 sh 'sudo apt-get update -y'
                 sh 'sudo apt-get install git -y'
-                git 'https://github.com/palashgadpayle/student-ui.git'
+                git 'https://github.com/chinmayvpotdar/student-ui.git'
                 sh 'ls'
             }
         }
